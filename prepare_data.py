@@ -26,16 +26,16 @@ Created on Mon Jul  1 19:51:19 2019
 
 ################################################
 import os
-os.chdir("C:\\Users\\calpi\\OneDrive\\Documents\\kitano\\signate\\Lunchbox")
+os.chdir("C:\\Users\\KUSER2\\Documents\\@kitano\\業務外\\勉強\\Lunchbox")
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 import seaborn as sns
 import sklearn
 import re
-import pandas_profiling
-profile = train.profile_report()
-profile.to_file(output_file="output.html")
+#import pandas_profiling
+#profile = train.profile_report()
+#profile.to_file(output_file="output.html")
 
 sns.set(font="IPAexGothic",style="white")
 
