@@ -5,21 +5,36 @@ Created on Wed Jul 17 19:43:34 2019
 @author: calpi
 """
 
-#seabornが日本語に対応するように設定する。
-import matplotlib as mpl
-import matplotlib.pyplot as plt
+
 #可視化をしてみる。
 import seaborn as sns
-#とりあえず一時しのぎで設定してみる
+import matplotlib.pyplot as plt
+import os
+os.chdir("C:\\Users\\KUSER2\\Documents\\@kitano\\業務外\\勉強\\Lunchbox\\chart\\y")
+import datetime
 
+#yについて探索
+os.chdir("C:\\Users\\KUSER2\\Documents\\@kitano\\業務外\\勉強\\Lunchbox\\chart\\y")
+sns.set()
+plt.hist(train['y'])
+plt.title("yのヒストグラム")
+plt.savefig("yのヒストグラム")
 
-#ヒストグラム
-sns.distplot(train['y'])
+datetime.datetime.strptime(train['datetime'],'%y%m%d')
+
+plt.plot(train['datetime'],train['y'])
+plt.title("yの時系列")
+plt.xlabel("datetime")
+plt.ylabel("売上")
+plt.savefig("yの時系列")
+
+train.dtypes
+datetime_train['datetime']
+train.head()
 #散布図
-sns.jointplot('temperature','y',data=train)
+#sns.jointplot('temperature','y',data=train)
 
 #カテゴリごとにデータを見る。
-sns.stripplot('week','y',data=train)
-plt.show()
+#sns.stripplot('week','y',data=train)
+#plt.show()
 
-train.columns

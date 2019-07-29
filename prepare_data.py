@@ -29,10 +29,7 @@ import os
 os.chdir("C:\\Users\\KUSER2\\Documents\\@kitano\\業務外\\勉強\\Lunchbox")
 import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt
-import seaborn as sns
-import sklearn
-import re
+
 #import pandas_profiling
 #profile = train.profile_report()
 #profile.to_file(output_file="output.html")
@@ -91,7 +88,6 @@ def pre(data):
 
 
 train = pre(train)
-train.tail(10)
 
 #次、決定木でモデリング
 #extra treesが良い精度出るらしい。
